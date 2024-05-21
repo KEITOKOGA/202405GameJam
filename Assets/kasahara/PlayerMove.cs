@@ -5,6 +5,15 @@ namespace playerMove
     public class Player : MonoBehaviour
     {
         [SerializeField] private float speed;
+        [SerializeField] private GameObject _sight;
+        private Animator _animator;
+        private Rigidbody2D _rb;
+
+        private void Start()
+        {
+            _animator = GetComponent<Animator>();
+            _rb = GetComponent<Rigidbody2D>();
+        }
 
         private void Update()
         {
@@ -30,9 +39,11 @@ namespace playerMove
             _move.Normalize();
             if (_move != Vector2.zero)
             {
-                transform.rotation = Quaternion.FromToRotation(Vector3.up, new Vector3(_move.x, _move.y, 0));
+                _sight.transform.rotation = Quaternion.FromToRotation(Vector3.up, new Vector3(_move.x, _move.y, 0));
             }
-            GetComponent<Rigidbody2D>().velocity = speed * _move;
+            _rb.velocity = speed * _move;
+            _animator.SetFloat("HorizontalVelocity", _rb.velocity.x);
+            _animator.SetFloat("VerticalVelocity", _rb.velocity.y);
         }
     }
 }
