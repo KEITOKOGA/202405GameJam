@@ -6,7 +6,7 @@ namespace playerMove
 {
     public class Player : MonoBehaviour
     {
-        public float speed;
+        [SerializeField] private float speed;
 
         private void Update()
         {
