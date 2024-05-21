@@ -8,7 +8,7 @@ public class TimeManager : MonoBehaviour
 {
     [SerializeField]
     private GameManager gameManager;
-    private float currentTime;
+    private static float currentTime;
     private Text currentTimeText;
     private Text fastestTimeText;
     private static float fastestTime = 999.999f;
