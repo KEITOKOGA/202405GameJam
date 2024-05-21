@@ -1,35 +1,35 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Player_Item : MonoBehaviour
 {
-    public int keyCount = 0;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public static int _keyCount = 0;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void OnCollisionEnter2D(Collision2D collision)
     {
         string getTag = collision.gameObject.tag;
         Debug.Log(getTag);
 
-            if(getTag == "Key")
-                {
-                    keyCount++;
-                    collision.gameObject.SetActive(false);
-                }
-            if(getTag =="Door" &&  keyCount > 0)
-                {
-                    keyCount--;
-                    collision.gameObject.SetActive(false);
-                }
+        if (getTag == "Key")
+        {
+            _keyCount++;
+            collision.gameObject.SetActive(false);
+            Debug.Log(_keyCount);
+        }
+
+        
+    }
+    public void OnCollisionStay2D(Collision2D collision)
+    {
+        string getTag = collision.gameObject.tag;
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            Debug.Log("ddd");
+            if (getTag == "Door" && _keyCount > 0)
+            {
+            _keyCount--;
+            collision.gameObject.SetActive(false);
+            Debug.Log(_keyCount);
+            }
+        }
     }
 }
