@@ -3,7 +3,6 @@
 public class Player_Item : MonoBehaviour
 {
     public static int _keyCount = 0;
-    [SerializeField] GameObject _door;
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
@@ -14,6 +13,7 @@ public class Player_Item : MonoBehaviour
         {
             _keyCount++;
             collision.gameObject.SetActive(false);
+            Debug.Log(_keyCount);
         }
 
         
@@ -25,8 +25,11 @@ public class Player_Item : MonoBehaviour
         {
             Debug.Log("ddd");
             if (getTag == "Door" && _keyCount > 0)
-                _keyCount--;
-                collision.gameObject.SetActive(false);
+            {
+            _keyCount--;
+            collision.gameObject.SetActive(false);
+            Debug.Log(_keyCount);
+            }
         }
     }
 }
