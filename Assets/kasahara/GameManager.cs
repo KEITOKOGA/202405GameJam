@@ -18,14 +18,14 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InstantiateMessage("ゲームスタート");
+
     }
 
     public void Goal()
     {
         finished = true;
         //　ゴール用テキスト表示
-        InstantiateMessage("ゴール！！");
+        InstantiateMessage("ESCAPE！！");
         //　最高タイムの更新
         timeManager.UpdateFastestTime();
         StartCoroutine(ReStart());

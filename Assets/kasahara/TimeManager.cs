@@ -8,7 +8,7 @@ public class TimeManager : MonoBehaviour
 {
     [SerializeField]
     private GameManager gameManager;
-    private static float currentTime;
+    public static float currentTime;
     private Text currentTimeText;
     private Text fastestTimeText;
     private static float fastestTime = 999.999f;
@@ -16,10 +16,10 @@ public class TimeManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //currentTimeText = transform.Find("CurrentTimeText").GetComponent<Text>();
+        currentTimeText = transform.Find("Text").GetComponent<Text>();
         //　最速タイムを表示
-        //fastestTimeText = transform.Find("FastestTimeText").GetComponent<Text>();
-        //fastestTimeText.text = fastestTime.ToString("0.000");
+        fastestTimeText = transform.Find("Text").GetComponent<Text>();
+        fastestTimeText.text = fastestTime.ToString("0.000");
     }
 
     // Update is called once per frame
