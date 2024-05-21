@@ -28,7 +28,10 @@ namespace playerMove
             }
 
             _move.Normalize();
-
+            if (_move != Vector2.zero)
+            {
+                transform.rotation = Quaternion.FromToRotation(Vector3.up, new Vector3(_move.x, _move.y, 0));
+            }
             GetComponent<Rigidbody2D>().velocity = speed * _move;
         }
     }
