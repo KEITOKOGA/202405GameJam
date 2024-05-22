@@ -1,19 +1,16 @@
-﻿
-using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class TimeManager : MonoBehaviour
 {
-    [SerializeField]
-    private GameManager gameManager;
+    [SerializeField] private GameManager gameManager;
     public static float currentTime;
     private static float fastestTime = 999.999f;
+    public SaveManager _saveManager;
 
-    void Start()
+    private void Start()
     {
-
+        _saveManager = GetComponent<SaveManager>();
     }
 
     void Update()
@@ -22,7 +19,6 @@ public class TimeManager : MonoBehaviour
         if (!gameManager.IsFinished())
         {
             currentTime += Time.deltaTime;
-            //Debug.Log(currentTime);
         }
     }
 
@@ -32,6 +28,7 @@ public class TimeManager : MonoBehaviour
         if (currentTime < fastestTime)
         {
             fastestTime = currentTime;
+            _saveManager.SaveTime(currentTime);
         }
     }
 }
