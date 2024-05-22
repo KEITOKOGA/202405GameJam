@@ -1,4 +1,4 @@
-
+ï»¿
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,23 +9,16 @@ public class TimeManager : MonoBehaviour
     [SerializeField]
     private GameManager gameManager;
     public static float currentTime;
-    private Text currentTimeText;
-    private Text fastestTimeText;
     private static float fastestTime = 999.999f;
 
-    // Start is called before the first frame update
     void Start()
     {
-        currentTimeText = transform.Find("Text").GetComponent<Text>();
-        //@Å‘¬ƒ^ƒCƒ€‚ğ•\¦
-        fastestTimeText = transform.Find("Text").GetComponent<Text>();
-        fastestTimeText.text = fastestTime.ToString("0.000");
+
     }
 
-    // Update is called once per frame
     void Update()
     {
-        //@ƒS[ƒ‹‚µ‚Ä‚¢‚È‚¯‚ê‚ÎŠÔ‚ğŒv‘ª
+        //ã€€ã‚´ãƒ¼ãƒ«ã—ã¦ã„ãªã‘ã‚Œã°æ™‚é–“ã‚’è¨ˆæ¸¬
         if (!gameManager.IsFinished())
         {
             currentTime += Time.deltaTime;
@@ -33,7 +26,7 @@ public class TimeManager : MonoBehaviour
         }
     }
 
-    //@Å‚ƒ^ƒCƒ€‚ÌXV
+    //ã€€æœ€é«˜ã‚¿ã‚¤ãƒ ã®æ›´æ–°
     public void UpdateFastestTime()
     {
         if (currentTime < fastestTime)
