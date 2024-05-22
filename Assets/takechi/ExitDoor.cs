@@ -18,6 +18,8 @@ namespace takechi
         {
             if (other.CompareTag("Player") && Player_Item.EntranceKeyCount >= _exitKeyCount)
             {
+                AudioManager.Instance.PlaySE(0);
+                AudioManager.Instance.PlaySE(1);
                 Player_Item.EntranceKeyCount -= _exitKeyCount;
                 if(gameManager) gameManager.Goal();
                 SceneManager.LoadScene(_gameClearSceneName);

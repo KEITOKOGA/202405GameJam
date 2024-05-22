@@ -1,3 +1,5 @@
+using System;
+using takechi;
 using UnityEngine;
 
 namespace playerMove
@@ -44,6 +46,18 @@ namespace playerMove
             _rb.velocity = speed * _move;
             _animator.SetFloat("HorizontalVelocity", _rb.velocity.x);
             _animator.SetFloat("VerticalVelocity", _rb.velocity.y);
+        }
+
+        private void FixedUpdate()
+        {
+            if (_rb.velocity != Vector2.zero)
+            {
+                AudioManager.Instance.PlayFootSteps();
+            }
+            else
+            {
+                AudioManager.Instance.StopFootSteps();
+            }
         }
     }
 }
