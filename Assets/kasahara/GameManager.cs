@@ -19,11 +19,12 @@ public class GameManager : MonoBehaviour
 
     public void Goal()
     {
+        SaveManager.Instance.SaveTime(TimeManager.currentTime);
         finished = true;
         timeManager.UpdateFastestTime();
     }
 
-    //@ƒQ[ƒ€‚ğI—¹‚µ‚½‚©‚Ç‚¤‚©
+    //ã€€ã‚²ãƒ¼ãƒ ã‚’çµ‚äº†ã—ãŸã‹ã©ã†ã‹
     public bool IsFinished()
     {
         return finished;

@@ -22,7 +22,6 @@ public class TimeManager : MonoBehaviour
         if (currentTime < fastestTime)
         {
             fastestTime = currentTime;
-            SaveManager.Instance.SaveTime(currentTime);
         }
     }
 }
