@@ -368,6 +368,14 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6376263692184633635, guid: eb46f3857f788d54ebe40cdbe0966926, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6376263692184633635, guid: eb46f3857f788d54ebe40cdbe0966926, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -320
+      objectReference: {fileID: 0}
     - target: {fileID: 6528154479433410878, guid: eb46f3857f788d54ebe40cdbe0966926, type: 3}
       propertyPath: m_Text
       value: "\u304D\u3082\u3060\u3081\u3057"
