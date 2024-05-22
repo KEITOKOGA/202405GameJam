@@ -981,7 +981,7 @@ MonoBehaviour:
   _position: {x: 1.11, y: -3}
   _moveToSceneName: Room2
   _isLocked: 1
-  _consumeKey: 0
+  _consumeKey: 1
   _doorID: Door2
 --- !u!61 &389421527
 BoxCollider2D:
