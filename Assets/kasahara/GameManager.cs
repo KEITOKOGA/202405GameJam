@@ -28,22 +28,12 @@ public class GameManager : MonoBehaviour
         InstantiateMessage("ESCAPE！！");
         //　最高タイムの更新
         timeManager.UpdateFastestTime();
-        StartCoroutine(ReStart());
     }
 
     //　ゲームを終了したかどうか
     public bool IsFinished()
     {
         return finished;
-    }
-
-    //　ゲームのリスタート
-    IEnumerator ReStart()
-    {
-        //　3秒後にリスタート
-        yield return new WaitForSeconds(3f);
-        //　現在のシーンを再読み込み
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     //　ゲーム内メッセージを表示
