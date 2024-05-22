@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class KeyCounter : MonoBehaviour
+public class KeyView : MonoBehaviour
 {
     [SerializeField] private Text _doorKeyCountText;
     [SerializeField] private Text _entranceDoorKeyCountText;

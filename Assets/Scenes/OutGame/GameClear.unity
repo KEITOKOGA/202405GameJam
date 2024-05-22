@@ -191,6 +191,7 @@ GameObject:
   - component: {fileID: 754241916}
   - component: {fileID: 754241918}
   - component: {fileID: 754241917}
+  - component: {fileID: 754241919}
   m_Layer: 5
   m_Name: PlayerRacode
   m_TagString: Untagged
@@ -259,6 +260,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 754241915}
   m_CullTransparentMesh: 1
+--- !u!114 &754241919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 754241915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d062dc3ca82548b4191f5303561e25a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _timeText: {fileID: 754241917}
+  _updateText: 0
 --- !u!1 &825989941
 GameObject:
   m_ObjectHideFlags: 0
