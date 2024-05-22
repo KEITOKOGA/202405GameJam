@@ -42,5 +42,9 @@ public class SceneChangeDispatcher
             Key.ObtainedKeys.Clear();
             SceneChangeDoor.UnlockedDoors.Clear();
         }
+        if(scene.name is "GameOver" or "Title")
+        {
+            TimeManager.currentTime = 0;
+        }
     }
 }
