@@ -19,7 +19,7 @@ namespace takechi
             if (other.CompareTag("Player") && Player_Item.EntranceKeyCount >= _exitKeyCount)
             {
                 Player_Item.EntranceKeyCount -= _exitKeyCount;
-                gameManager.Goal();
+                if(gameManager) gameManager.Goal();
                 SceneManager.LoadScene(_gameClearSceneName);
             }
         }
