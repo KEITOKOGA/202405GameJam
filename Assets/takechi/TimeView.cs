@@ -9,14 +9,21 @@ public class TimeView : MonoBehaviour
 
     private void Start()
     {
-        _timeText.text = TimeManager.currentTime.ToString("0.0");
+        
+        _timeText.text = FormatTime(TimeManager.currentTime);
     }
 
     private void Update()
     {
         if (_updateText)
         {
-            _timeText.text = TimeManager.currentTime.ToString("0.0");
+            _timeText.text = FormatTime(TimeManager.currentTime);
         }
+    }
+    private string FormatTime(float time)
+    {
+        var minutes = (int)(time / 60f);
+        var seconds = (int)(time % 60f);
+        return $"{minutes:00}:{seconds:00}";
     }
 }
