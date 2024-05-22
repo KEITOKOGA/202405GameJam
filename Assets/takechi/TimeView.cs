@@ -9,14 +9,14 @@ public class TimeView : MonoBehaviour
 
     private void Start()
     {
-        _timeText.text = TimeManager.currentTime.ToString();
+        _timeText.text = TimeManager.currentTime.ToString("0.0");
     }
 
     private void Update()
     {
         if (_updateText)
         {
-            _timeText.text = TimeManager.currentTime.ToString();
+            _timeText.text = TimeManager.currentTime.ToString("0.0");
         }
     }
 }
