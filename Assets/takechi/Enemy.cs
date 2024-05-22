@@ -10,6 +10,10 @@ public class Enemy : MonoBehaviour
     [SerializeField, Header("ゲームオーバーシーンの名前")] private string _gameOverSceneName;
     private NavMeshAgent _agent;
     private Transform _target;
+    /// <summary>うなり声のタイマー</summary>
+    private float _growlTimer;
+    /// <summary>うなり声の間隔</summary>
+    private float _growlInterval;
     public float SearchRadius => _searchRadius;
     void Start()
     {
@@ -17,6 +21,7 @@ public class Enemy : MonoBehaviour
         _agent = GetComponent<NavMeshAgent>();
         _agent.updateRotation = false;
         _agent.updateUpAxis = false;
+        _growlInterval = Random.Range(0f, 10f);
     }
 
     void Update()
@@ -34,7 +39,14 @@ public class Enemy : MonoBehaviour
         {
             _agent.Stop();
         }
-        
+        if (_growlTimer > _growlInterval)
+        {
+            AudioManager.Instance.PlaySE(4);
+            _growlTimer = 0;
+            _growlInterval = Random.Range(0f, 10f);
+        }
+
+        _growlTimer += Time.deltaTime;
     }
 
     private void OnTriggerEnter2D(Collider2D other)

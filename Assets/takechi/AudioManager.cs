@@ -76,17 +76,20 @@ namespace takechi
         {
             _playedFootSteps = false;
             _footStepsSource.Stop();
-            if (scene.name is "Hall")
+            switch (scene.name)
             {
-                PlayBGM(0);
-            }
-            else if (scene.name is "Title")
-            {
-                PlayBGM(1);
-            }
-            else if (scene.name is "GameOver" or "GameClear")
-            {
-                StopBGM();
+                case "Hall":
+                    PlayBGM(0);
+                    break;
+                case "Title":
+                    PlayBGM(1);
+                    break;
+                case "GameOver":
+                    StopBGM();
+                    break;
+                case "GameClear":
+                    PlayBGM(2);
+                    break;
             }
         }
     }
