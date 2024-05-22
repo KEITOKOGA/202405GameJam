@@ -48,6 +48,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: efc892f0f15880f4c99efd8693330e0c, type: 3}
   - {fileID: 8300000, guid: 7e65d94a63310094984fd482dce8a260, type: 3}
   - {fileID: 8300000, guid: 102ef4d30bf2e1540801fbd5b524dea6, type: 3}
+  - {fileID: 8300000, guid: dca354aa88053fa41bc7efed155ed744, type: 3}
   _bgmList:
   - {fileID: 8300000, guid: 9760df9f850506f4a8e1ece957c4ad6b, type: 3}
+  - {fileID: 8300000, guid: 3df78eac271b9414592cb65f8ad0815c, type: 3}
   _footSteps: {fileID: 8300000, guid: 41bff1c1ca5f112469793ecd8e9412ea, type: 3}

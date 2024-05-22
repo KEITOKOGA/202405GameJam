@@ -76,9 +76,17 @@ namespace takechi
         {
             _playedFootSteps = false;
             _footStepsSource.Stop();
-            if (scene.name is "GameOver" or "GameClear" or "Title")
+            if (scene.name is "Hall")
             {
                 PlayBGM(0);
+            }
+            else if (scene.name is "Title")
+            {
+                PlayBGM(1);
+            }
+            else if (scene.name is "GameOver" or "GameClear")
+            {
+                StopBGM();
             }
         }
     }

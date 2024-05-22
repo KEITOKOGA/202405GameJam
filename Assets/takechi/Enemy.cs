@@ -1,3 +1,4 @@
+using takechi;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
@@ -40,6 +41,7 @@ public class Enemy : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            AudioManager.Instance.PlaySE(3);
             SceneManager.LoadScene(_gameOverSceneName);
         }
     }
