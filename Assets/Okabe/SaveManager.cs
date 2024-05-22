@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using System.Linq;
+using takechi;
 using UnityEngine;
 
 public class SaveManager : MonoBehaviour
@@ -17,19 +20,26 @@ public class SaveManager : MonoBehaviour
     
     public void SaveTime(float time)
     {
-        for (var i = 0; i < 3; i++)
+        var data = LoadTime();
+        if (data != null)
         {
-            var savedTime = PlayerPrefs.GetFloat("ClearTime" + i, 999.999f);
-            if (time < savedTime)
-            {
-                PlayerPrefs.SetFloat("ClearTime" + i, time);
-                return;
-            }
+            data.ClearRecords.Add(time);
         }
+        else
+        {
+            data = new SaveData();
+            data.ClearRecords.Add(time);
+        }
+
+        data.ClearRecords = data.ClearRecords.OrderBy(f=>f).ToList();
+
+        var json = JsonUtility.ToJson(data);
+        PlayerPrefs.SetString("SaveData", json);
     }
 
-    public float LoadTime(int index)
+    public SaveData LoadTime()
     {
-        return PlayerPrefs.GetFloat("ClearTime" + index, 999.999f);
+        var json = PlayerPrefs.GetString("SaveData");
+        return JsonUtility.FromJson<SaveData>(json);
     }
 }

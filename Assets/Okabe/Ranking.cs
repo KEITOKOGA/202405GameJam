@@ -13,33 +13,32 @@ public class Ranking : MonoBehaviour
 
     private void ShowRanking()
     {
-        var times = new List<float>();
-
-        // ランキングに表示するデータを読み込む
-        for (var i = 0; i < 3; i++)
-        {
-            var time = SaveManager.Instance.LoadTime(i);
-            if (time > 0)
-            {
-                times.Add(time);
-            }
-        }
-
-        // 時間の短い順にソート
-        times.Sort();
-
-        // ランキングのテキストを更新
+        var saveData = SaveManager.Instance.LoadTime();
         rankingText.text = "";
-        for (var i = 0; i < times.Count; i++)
+        if (saveData == null)
         {
-            rankingText.text += (i + 1) + ". " + times[i] + "\n";
+            rankingText.text = "No Data";
+        }
+        else
+        {
+            int count = 1;
+            foreach (var record in saveData.ClearRecords)
+            {
+                rankingText.text += count + ". " + FormatTime(record) + "\n";
+                if (count >= 3)
+                {
+                    break;
+                }
+
+                count++;
+            }
         }
     }
 
     private string FormatTime(float time)
     {
-        var minutes = (int)(time / 60);
-        var seconds = (int)(time % 60);
+        var minutes = (int)(time / 60f);
+        var seconds = (int)(time % 60f);
         return $"{minutes:00}:{seconds:00}";
     }
 }
