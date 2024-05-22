@@ -3,15 +3,17 @@ using UnityEngine.UI;
 
 public class KeyCounter : MonoBehaviour
 {
-    private Text _text;
+    [SerializeField] private Text _doorKeyCountText;
+    [SerializeField] private Text _entranceDoorKeyCountText;
     void Start()
     {
-        _text = GetComponent<Text>();
-        _text.text = $"x {Player_Item._keyCount}";
+        _doorKeyCountText.text = $"x {Player_Item._keyCount}";
+        _entranceDoorKeyCountText.text = $"x {Player_Item.EntranceKeyCount}";
     }
 
     void Update()
     {
-        _text.text = $"x {Player_Item._keyCount}";
+        _doorKeyCountText.text = $"x {Player_Item._keyCount}";
+        _entranceDoorKeyCountText.text = $"x {Player_Item.EntranceKeyCount}";
     }
 }

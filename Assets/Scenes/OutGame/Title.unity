@@ -123,6 +123,50 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &296318355
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 296318356}
+  - component: {fileID: 296318357}
+  m_Layer: 0
+  m_Name: SceneChangeInitializer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &296318356
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296318355}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.4484935, y: 5.966559, z: -0.17782739}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &296318357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296318355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 415abecdbe554422ad7e54ebfd216ceb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &411363683
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -136,12 +180,24 @@ PrefabInstance:
       value: TitleStart
       objectReference: {fileID: 0}
     - target: {fileID: 4317388136711849430, guid: eb46f3857f788d54ebe40cdbe0966926, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317388136711849430, guid: eb46f3857f788d54ebe40cdbe0966926, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 966713280}
     - target: {fileID: 4317388136711849430, guid: eb46f3857f788d54ebe40cdbe0966926, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnClickRestart
+      value: OnClickSceneLoad
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317388136711849430, guid: eb46f3857f788d54ebe40cdbe0966926, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneChanger, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317388136711849430, guid: eb46f3857f788d54ebe40cdbe0966926, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Hall
       objectReference: {fileID: 0}
     - target: {fileID: 8680404351887710991, guid: eb46f3857f788d54ebe40cdbe0966926, type: 3}
       propertyPath: m_Pivot.x
@@ -359,6 +415,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ButtonManager
       objectReference: {fileID: 0}
+    - target: {fileID: 6991959399720836983, guid: 4883384d91a2f6547a1643362de2f524, type: 3}
+      propertyPath: _sceneName
+      value: Hall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -464,3 +524,4 @@ SceneRoots:
   - {fileID: 411363683}
   - {fileID: 970921463}
   - {fileID: 885203879}
+  - {fileID: 296318356}
