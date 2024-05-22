@@ -6,12 +6,13 @@ using UnityEngine.SceneManagement;
 public class Enemy : MonoBehaviour
 {
     [SerializeField, Header("追いかけ始める範囲")] private float _searchRadius = 3f;
-    [SerializeField, Header("追いかける対象")] private Transform _target;
     [SerializeField, Header("ゲームオーバーシーンの名前")] private string _gameOverSceneName;
     private NavMeshAgent _agent;
+    private Transform _target;
     public float SearchRadius => _searchRadius;
     void Start()
     {
+        _target = GameObject.FindWithTag("Player").transform;
         _agent = GetComponent<NavMeshAgent>();
         _agent.updateRotation = false;
         _agent.updateUpAxis = false;
@@ -35,7 +36,7 @@ public class Enemy : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
