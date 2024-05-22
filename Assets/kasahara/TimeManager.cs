@@ -6,12 +6,6 @@ public class TimeManager : MonoBehaviour
     [SerializeField] private GameManager gameManager;
     public static float currentTime;
     private static float fastestTime = 999.999f;
-    public SaveManager _saveManager;
-
-    private void Start()
-    {
-        _saveManager = GetComponent<SaveManager>();
-    }
 
     void Update()
     {
@@ -28,7 +22,7 @@ public class TimeManager : MonoBehaviour
         if (currentTime < fastestTime)
         {
             fastestTime = currentTime;
-            _saveManager.SaveTime(currentTime);
+            SaveManager.Instance.SaveTime(currentTime);
         }
     }
 }

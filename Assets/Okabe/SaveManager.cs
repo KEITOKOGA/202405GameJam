@@ -2,6 +2,19 @@ using UnityEngine;
 
 public class SaveManager : MonoBehaviour
 {
+    public static SaveManager Instance { get; private set; }
+
+    private void Start()
+    {
+        if(Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+    }
+
+    
     public void SaveTime(float time)
     {
         for (var i = 0; i < 3; i++)
@@ -10,7 +23,6 @@ public class SaveManager : MonoBehaviour
             if (time < savedTime)
             {
                 PlayerPrefs.SetFloat("ClearTime" + i, time);
-                PlayerPrefs.Save();
                 return;
             }
         }
