@@ -34,4 +34,6 @@ public class CameraShake : MonoBehaviour
         cinemaChineBasicMultiChannelPerlin.m_AmplitudeGain = intensity;
         _shakeTimer = timer;
     }
+    
+    
 }
