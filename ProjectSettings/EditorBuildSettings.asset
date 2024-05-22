@@ -6,9 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/OutGame/Title.unity
+    guid: 6fd72a3b6105e9242b6ab4ebb3479703
   - enabled: 1
-    path: Assets/Kouga/room1 1.unity
-    guid: 231b49408dd0fd84c89216f33c295ff2
+    path: Assets/Scenes/OutGame/GameOver.unity
+    guid: 7fc212fd375b25b409dd38acce3cc4ca
+  - enabled: 1
+    path: Assets/Scenes/OutGame/GameClear.unity
+    guid: f86546c967184c84288502c133445973
+  - enabled: 1
+    path: Assets/Scenes/InGame/Hall.unity
+    guid: 9ac9f2e37347ad54692c15af00e38dab
+  - enabled: 1
+    path: Assets/Scenes/InGame/Room1.unity
+    guid: 6bb788d3eca56e44a9781732c6a17e5f
+  - enabled: 1
+    path: Assets/Scenes/InGame/Room2.unity
+    guid: 7e0c7b34d42c1c8488a2e76049f8da10
   m_configObjects: {}
