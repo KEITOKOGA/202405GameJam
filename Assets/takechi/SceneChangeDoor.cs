@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using takechi;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -21,6 +22,7 @@ public class SceneChangeDoor : MonoBehaviour
             }
             else if (Player_Item._keyCount > 0)
             {
+                AudioManager.Instance.PlaySE(0);
                 if(_consumeKey) Player_Item._keyCount--;
                 UnlockedDoors.Add(_doorID);
                 Move();
@@ -30,6 +32,7 @@ public class SceneChangeDoor : MonoBehaviour
 
     void Move()
     {
+        AudioManager.Instance.PlaySE(1);
         SceneChangeDispatcher.Instance.InitialPlayerPosition = new Vector3(_position.x, _position.y, 0);
         SceneChangeDispatcher.Instance.ChangePlayerPosition = true;
         SceneManager.LoadScene(_moveToSceneName);

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using takechi;
 using UnityEngine;
 
 public class Key : MonoBehaviour
@@ -27,6 +28,7 @@ public class Key : MonoBehaviour
             {
                 Player_Item._keyCount++;
             }
+            AudioManager.Instance.PlaySE(2);
             gameObject.SetActive(false);
             ObtainedKeys.Add(_keyID);
         }
