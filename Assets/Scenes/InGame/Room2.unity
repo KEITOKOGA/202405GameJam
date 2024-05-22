@@ -28188,6 +28188,7 @@ MonoBehaviour:
   _position: {x: 7, y: 0}
   _moveToSceneName: Hall
   _isLocked: 0
+  _consumeKey: 1
   _doorID: 
 --- !u!61 &1451764255
 BoxCollider2D:
@@ -28403,6 +28404,10 @@ PrefabInstance:
     - target: {fileID: 3980798139501085488, guid: e7c975663d3764143b9ea535b335428e, type: 3}
       propertyPath: m_SortingOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8017893142495651530, guid: e7c975663d3764143b9ea535b335428e, type: 3}
+      propertyPath: _keyID
+      value: EntranceKey2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
