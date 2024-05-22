@@ -226,7 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fdb98aa81c89fa4eaad64d774297f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _position: {x: 1, y: -3}
+  _position: {x: 1.11, y: -3}
   _moveToSceneName: Room2
   _isLocked: 1
   _doorID: Door2
@@ -72910,7 +72910,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fdb98aa81c89fa4eaad64d774297f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _position: {x: 5, y: -5}
+  _position: {x: 5.08, y: -5.07}
   _moveToSceneName: Room1
   _isLocked: 1
   _doorID: Door1
@@ -73000,7 +73000,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 999
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.96862745}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.78431374}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -81306,6 +81306,10 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 879423303}
+    - target: {fileID: 2938238448667136623, guid: ac4f6efdf864d9a4799d87682d656235, type: 3}
+      propertyPath: m_Lens.OrthographicSize
+      value: 13.26074
+      objectReference: {fileID: 0}
     - target: {fileID: 4218174079532573934, guid: ac4f6efdf864d9a4799d87682d656235, type: 3}
       propertyPath: m_Name
       value: Virtual Camera
@@ -81591,6 +81595,10 @@ PrefabInstance:
     - target: {fileID: 5172733004417201679, guid: 5f7ca4c62901d9c4fa26f869f72e3435, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5563660954413601838, guid: 5f7ca4c62901d9c4fa26f869f72e3435, type: 3}
+      propertyPath: orthographic size
+      value: 13.26074
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -82011,7 +82019,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 967874907225417499, guid: c5f138a809d91484a8bcefa1df0c4e3b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.7
+      value: -2.63
       objectReference: {fileID: 0}
     - target: {fileID: 967874907225417499, guid: c5f138a809d91484a8bcefa1df0c4e3b, type: 3}
       propertyPath: m_LocalPosition.z
